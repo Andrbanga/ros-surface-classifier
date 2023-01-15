@@ -1,0 +1,5 @@
+<launch>
+    <node pkg="tf2_ros" type="static_transform_publisher" name="base_body" args="0 0 0.37 0 0 0 base_link body" />
+    <node pkg="tf2_ros" type="static_transform_publisher"  name="body_laser_tf_broadcaster" args="0.243 0 0.2238 0 -0.005 0 body velodyne" />
+   
+</launch>

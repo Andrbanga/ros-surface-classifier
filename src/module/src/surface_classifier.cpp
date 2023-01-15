@@ -120,7 +120,7 @@ void SurfaceClassifier::find_objects(
     extract.setInputCloud(input_cloud);
     extract.setIndices(inliers);
     extract.setNegative(false);
-    extract.filter(*cloud_segment);find_planes
+    extract.filter(*cloud_segment);
 
     // ROS_INFO("Found %i planes", plane_counter);
     // ROS_INFO("Plane size: %i", cloud_segment->size());

@@ -1,0 +1,28 @@
+
+
+<launch>
+
+
+  <include file="$(find ros-surface-classifier)/launch/tf_vel.launch"/>
+
+
+  <!-- segmentation -->
+  <node name= "segmentation" pkg= "ros-surface-classifier" type= "surface_classifire_node" respawn= "false">
+
+    <param name="vertical_model_max_iterations" type="int" value="1000" />
+    <param name="horizontal_model_max_iterations" type="int" value="100" />
+
+    <param name="vertical_model_angle_eps" type="double" value="1" />
+    <param name="horizontal_model_angle_eps" type="double" value="1" />
+
+    <param name="vertical_model_distance_threshold" type="double" value="0.07" />
+    <param name="horizontal_model_distance_threshold" type="double" value="0.07" />
+  
+  </node>
+
+  <!-- rviz -->
+  <node pkg="rviz" type="rviz" name="$(anon rviz)" required="false"
+          args="-d $(find ros-surface-classifier)/config/test.rviz" output="screen">
+  </node>
+
+</launch>
