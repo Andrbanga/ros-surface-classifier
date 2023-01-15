@@ -9,6 +9,8 @@
   <!-- segmentation -->
   <node name= "segmentation" pkg= "ros-surface-classifier" type= "surface_classifire_node" respawn= "false">
 
+    <param name="input_pointcloud_topic" type="string" value="velodyne_points" />
+
     <param name="vertical_model_max_iterations" type="int" value="1000" />
     <param name="horizontal_model_max_iterations" type="int" value="100" />
 
