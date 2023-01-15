@@ -97,7 +97,7 @@ add_library(${PROJECT_NAME}
 ## Declare a C++ executable
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
-add_executable(${PROJECT_NAME}_node src/nodes/surface_classifire_node.cpp)
+add_executable(surface_classifire_node src/nodes/surface_classifire_node.cpp)
 
-target_link_libraries(${PROJECT_NAME}_node ${catkin_LIBRARIES} ${PCL_LIBRARIES} ${PROJECT_NAME})
+target_link_libraries(surface_classifire_node ${catkin_LIBRARIES} ${PCL_LIBRARIES} ${PROJECT_NAME})
 
